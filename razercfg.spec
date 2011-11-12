@@ -1,7 +1,7 @@
 Name:		razercfg
 Version:	0.17
 Release:	1
-Summary:	This is the next generation Razer device configuration tool bringing the Razer gaming experience to the free OpenSource world.
+Summary:	This is the next generation Razer device configuration tool bringing the Razer gaming experience to the free OpenSource world
                                                                                 
 Group:		System/Configuration/Hardware
 License:        GPLv2
