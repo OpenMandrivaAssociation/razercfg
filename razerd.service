@@ -1,0 +1,9 @@
+[Unit]
+Description=Razerd Daemon
+After=syslog.target
+
+[Service]
+ExecStart=/usr/sbin/razerd -B
+
+[Install]
+WantedBy=multi-user.target
