@@ -1,6 +1,6 @@
 Name:		razercfg
 Version:	0.19
-Release:	%mkrel 1
+Release:	2
 Summary:	Razer device configuration tool
 Group:		System/Configuration/Hardware
 License:	GPLv2
