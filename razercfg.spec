@@ -34,15 +34,19 @@ and "qrazercfg", a QT4 based graphical device configuration tool.
 
 %build
 %cmake
-%make
+%make_build
 
 %install
 #cd build/
-%makeinstall_std -C build
+%make_install -C build
 
 mkdir -p %{buildroot}%{_unitdir}/
 
 %{__install} -m 0755 %{SOURCE1} -D %{buildroot}%{_unitdir}/razerd.service
+%{__install} -d %{buildroot}%{_sbindir}
+mv %{buildroot}%{_bindir}/razerd %{buildroot}%{_sbindir}/razerd
+
+rm -f %{buildroot}/%{_libdir}/*.so
 
 %post
 %_post_service razerd.service
@@ -51,10 +55,15 @@ mkdir -p %{buildroot}%{_unitdir}/
 %_preun_service razerd.service
 
 %files
-%doc COPYING README
+%doc COPYING README* HACKING*
 %{_bindir}/*
 %{_sbindir}/razerd
 %{_unitdir}/razerd.service
-%{_libdir}/librazer.so
 %{_sysconfdir}/pm/sleep.d/50-razer
-%{_sysconfdir}/udev/rules.d/01-razer-udev.rules
+%{_udevrulesdir}/80-razer.rules
+%{python3_sitelib}/*
+%{_datadir}/applications/razercfg.desktop
+%{_iconsdir}/hicolor/scalable/*
+
+%files -n %{libname}
+%{_libdir}/*.so.%{major}{,.*}
