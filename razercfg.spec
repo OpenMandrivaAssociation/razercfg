@@ -1,3 +1,6 @@
+%define major 1
+%define libname %mklibname razer %{major}
+
 Name:		razercfg
 Version:	0.40
 Release:	1
@@ -75,7 +78,7 @@ rm -f %{buildroot}/%{_libdir}/*.so
 %{_sbindir}/razerd
 %{_unitdir}/razerd.service
 %{_sysconfdir}/pm/sleep.d/50-razer
-%{_udevrulesdir}/80-razer.rules
+#{_udevrulesdir}/80-razer.rules
 %{python3_sitelib}/*
 %{_datadir}/applications/razercfg.desktop
 %{_iconsdir}/hicolor/scalable/*
