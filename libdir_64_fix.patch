@@ -1,12 +1,13 @@
---- ./librazer/CMakeLists.txt.old	2011-11-12 14:35:45.000000000 +0400
-+++ ./librazer/CMakeLists.txt	2011-11-12 14:36:05.000000000 +0400
-@@ -20,7 +20,7 @@
+Index: razercfg-0.40/librazer/CMakeLists.txt
+===================================================================
+--- razercfg-0.40/librazer/CMakeLists.txt
++++ razercfg-0.40/librazer/CMakeLists.txt	2019-01-02 21:00:00.100364741 +0000
+@@ -36,7 +36,7 @@
  
  target_link_libraries(razer usb-1.0)
  
 -install(TARGETS razer DESTINATION lib)
 +install(TARGETS razer DESTINATION lib${LIB_SUFFIX})
-#+install(TARGETS razer DESTINATION lib${_LIB})
  
- 
- add_custom_target(razer_udev_rules
+ if (NOT DEFINED ENV{RPM_BUILD_ROOT} AND NOT DEFINED ENV{RAZERCFG_PKG_BUILD})
+ 	install_exec_cmd("ldconfig"
