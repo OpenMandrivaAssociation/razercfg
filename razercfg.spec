@@ -28,6 +28,21 @@ daemon doing all of the lowlevel privileged hardware accesses.
 The user interface tools are "razercfg", a commandline tool;
 and "qrazercfg", a QT4 based graphical device configuration tool.
 
+%package -n %{libname}
+Summary:        Razer device configuration tool
+Group:          System/Libraries
+Conflicts:      %{name} < 0.39-4
+Obsoletes:      %{_lib}%{name}1 < 0.39-3
+
+%description -n %{libname}
+This is the next generation Razer device configuration tool
+bringing the Razer gaming experience to the free open source world.
+This utility is a replacement for the old deathaddercfg tool.
+The tool architecture is based on "razerd", which is a background
+daemon doing all of the lowlevel privileged hardware accesses.
+The user interface tools are "razercfg", a commandline tool;
+and "qrazercfg", a QT4 based graphical device configuration tool.
+
 %prep
 %setup -q
 %autopatch -p1
