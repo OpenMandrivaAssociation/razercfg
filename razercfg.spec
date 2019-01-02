@@ -1,16 +1,21 @@
 Name:		razercfg
-Version:	0.19
-Release:	2
+Version:	0.40
+Release:	1
 Summary:	Razer device configuration tool
 Group:		System/Configuration/Hardware
 License:	GPLv2
 URL:		http://bues.ch/cms/hacking/razercfg.html
 Source0:	http://bues.ch/razercfg/%{name}-%{version}.tar.bz2
 Source1:	razerd.service
-BuildRequires:	python-qt4
-BuildRequires:	cmake
 BuildRequires:	pkgconfig(libusb-1.0)
-BuildRequires:	python-devel
+BuildRequires:	python-qt5-devel
+BuildRequires:	cmake
+BuildRequires:	pkgconfig(python)
+
+Requires:	python-qt5-core
+Requires:	python-qt5-gui
+Requires:	python-qt5-network
+Requires:	python-qt5-widgets
 Patch0:		libdir_64_fix.patch
 
 %description
