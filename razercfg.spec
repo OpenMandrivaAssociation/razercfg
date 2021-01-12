@@ -20,7 +20,6 @@ Requires:	python-qt5-gui
 Requires:	python-qt5-network
 Requires:	python-qt5-widgets
 Patch0:		libdir_64_fix.patch
-Patch1:		Add-the-working-directory-to-sys.path-to-fix-ftbfs.patch
 
 %description
 This is the next generation Razer device configuration tool
