@@ -2,7 +2,7 @@
 %define libname %mklibname razer %{major}
 
 Name:		razercfg
-Version:	0.40
+Version:	0.42
 Release:	1
 Summary:	Razer device configuration tool
 Group:		System/Configuration/Hardware
@@ -20,7 +20,6 @@ Requires:	python-qt5-gui
 Requires:	python-qt5-network
 Requires:	python-qt5-widgets
 Patch0:		libdir_64_fix.patch
-Patch1:		Add-the-working-directory-to-sys.path-to-fix-ftbfs.patch
 
 %description
 This is the next generation Razer device configuration tool
@@ -82,6 +81,7 @@ rm -f %{buildroot}/%{_libdir}/*.so
 %{python3_sitelib}/*
 %{_datadir}/applications/razercfg.desktop
 %{_iconsdir}/hicolor/scalable/*
+%{_prefix}/lib/tmpfiles.d/razerd.conf
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}{,.*}
