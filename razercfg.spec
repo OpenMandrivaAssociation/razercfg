@@ -81,6 +81,7 @@ rm -f %{buildroot}/%{_libdir}/*.so
 %{python3_sitelib}/*
 %{_datadir}/applications/razercfg.desktop
 %{_iconsdir}/hicolor/scalable/*
+%{_prefix}/lib/tmpfiles.d/razerd.conf
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}{,.*}
