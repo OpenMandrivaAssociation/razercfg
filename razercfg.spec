@@ -2,7 +2,7 @@
 %define libname %mklibname razer %{major}
 
 Name:		razercfg
-Version:	0.40
+Version:	0.42
 Release:	1
 Summary:	Razer device configuration tool
 Group:		System/Configuration/Hardware
