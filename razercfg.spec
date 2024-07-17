@@ -2,13 +2,13 @@
 %define libname %mklibname razer %{major}
 
 Name:		razercfg
-Version:	0.42
-Release:	2
+Version:	0.43
+Release:	1
 Summary:	Razer device configuration tool
 Group:		System/Configuration/Hardware
 License:	GPLv2
-URL:		http://bues.ch/cms/hacking/razercfg.html
-Source0:	http://bues.ch/razercfg/%{name}-%{version}.tar.bz2
+URL:		https://bues.ch/cms/hacking/razercfg.html
+Source0:	https://bues.ch/razercfg/%{name}-%{version}.tar.bz2
 Source1:	razerd.service
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	python-qt5-devel
