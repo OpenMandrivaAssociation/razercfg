@@ -73,11 +73,11 @@ rm -f %{buildroot}/%{_libdir}/*.so
 
 %files
 %doc COPYING README* HACKING*
-#{_bindir}/*
-#{_sbindir}/razerd
+%{_bindir}/razer*
+%{_bindir}/qrazercfg*
 %{_unitdir}/razerd.service
 %{_sysconfdir}/pm/sleep.d/50-razer
-#{_udevrulesdir}/80-razer.rules
+%{_sysconfdir}/udev/rules.d/80-razer.rules
 %{python3_sitelib}/*
 %{_datadir}/applications/razercfg.desktop
 %{_iconsdir}/hicolor/scalable/*
