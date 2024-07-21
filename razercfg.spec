@@ -60,8 +60,8 @@ and "qrazercfg", a QT4 based graphical device configuration tool.
 mkdir -p %{buildroot}%{_unitdir}/
 
 %{__install} -m 0755 %{SOURCE1} -D %{buildroot}%{_unitdir}/razerd.service
-%{__install} -d %{buildroot}%{_sbindir}
-mv %{buildroot}%{_bindir}/razerd %{buildroot}%{_sbindir}/razerd
+#{__install} -d %{buildroot}%{_sbindir}
+#mv %{buildroot}%{_bindir}/razerd %{buildroot}%{_sbindir}/razerd
 
 rm -f %{buildroot}/%{_libdir}/*.so
 
@@ -73,8 +73,8 @@ rm -f %{buildroot}/%{_libdir}/*.so
 
 %files
 %doc COPYING README* HACKING*
-%{_bindir}/*
-%{_sbindir}/razerd
+#{_bindir}/*
+#{_sbindir}/razerd
 %{_unitdir}/razerd.service
 %{_sysconfdir}/pm/sleep.d/50-razer
 #{_udevrulesdir}/80-razer.rules
