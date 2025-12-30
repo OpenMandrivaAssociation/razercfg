@@ -3,7 +3,7 @@
 
 Name:		razercfg
 Version:	0.43
-Release:	1
+Release:	2
 Summary:	Razer device configuration tool
 Group:		System/Configuration/Hardware
 License:	GPLv2
